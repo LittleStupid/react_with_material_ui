@@ -5,7 +5,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 // import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 // import MyAwesomeReactComponent from './MyAwesomeReactComponent';
-import MyTitleBar from './MyTitleBar'
+
+import MyMainContainer from './MyMainContainer'
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
@@ -14,7 +15,7 @@ injectTapEventPlugin();
 
 const App = () => (
   <MuiThemeProvider>
-    <MyTitleBar />
+    <MyMainContainer />
   </MuiThemeProvider>
 );
 
