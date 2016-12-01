@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import store from './redux/index';
 // import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 // import MyAwesomeReactComponent from './MyAwesomeReactComponent';
