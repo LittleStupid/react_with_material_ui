@@ -1,18 +1,30 @@
-import { combineReducers, applyMiddleware, compose, createStore } from 'redux'
-import { initState } from './initState'
+import { combineReducers, createStore } from 'redux'
+import initState from './initState'
 import { logout } from './actions'
 
 // ======================================================
 // 实例化 Store
 // ======================================================
-function theReducer(state=initState, action) {
+function theReducer(state, action) {
   switch(action.type) {
     case 'LOGOUT':
-      console.log('logout')
+      console.log('LOGOUT')
       return state
+    case 'TOGGLEDRAWER':
+      return Object.assign({}, state, {
+        showDrawer: !state.showDrawer
+      })
     default:
-    return state
+      return state
   }
 }
 
-export const store = createStore(theReducer)
+// export store = createStore(theReducer, initState)
+
+const store = createStore(theReducer, initState)
+
+store.subscribe(() =>
+  console.log(store.getState())
+);
+
+export {store}

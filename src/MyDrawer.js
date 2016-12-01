@@ -19,7 +19,7 @@ export default class DrawerSimpleExample extends React.Component {
           label="Toggle Drawer"
           onTouchTap={this.handleToggle}
         />
-        <Drawer open={this.state.open}>
+      <Drawer open={this.props.showDrawer}>
           <MenuItem>Menu Item</MenuItem>
           <MenuItem>Menu Item 2</MenuItem>
           <h1>Hello</h1>

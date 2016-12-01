@@ -2,7 +2,7 @@ import React from 'react';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import {store} from './redux/index'
-import {logout} from './redux/actions'
+import {toggleDrawer} from './redux/actions'
 
 const style = {
     margin: 0,
@@ -18,7 +18,10 @@ export default class FloatingActionButtonExampleSimple extends React.Component {
     super(props);
   }
 
-  handleToggle = () => store.dispatch(logout());
+  handleToggle = () => {
+    // console.log(store.getState())
+    store.dispatch(toggleDrawer())
+  }
 
   render() {
     return (
